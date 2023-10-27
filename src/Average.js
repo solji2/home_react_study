@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useState } from "react";
 
 const getAverage = (numbers) => {
@@ -23,6 +23,8 @@ const Average = () => {
     setList(nextList);
   };
 
+  const avg = useMemo(() => getAverage(list), [list]); //렌더링 과정에서 list의 값이 바뀌었을때만 연산을 실행
+  //list배열의 내용이 바뀔 때만 getAverage 함수호출
   return (
     <div>
       <input value={number} onChange={onChange}></input>
@@ -34,7 +36,7 @@ const Average = () => {
       </ul>
       <div>
         <b>평균값:</b>
-        {getAverage(list)}
+        {avg}
       </div>
     </div>
   );

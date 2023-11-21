@@ -7,30 +7,11 @@ import Timer from "./Timer";
 import Info from "./info";
 
 function App() {
-  // const [count, setCount] = useState(0);
-  // const [todos, setTodos] = useState([]);
-
-  // const increment = () => {
-  //   setCount((c) => c + 1);
-  // };
-
-  // const addTodo = useCallback(() => {
-  //   setTodos((t) => [...t, "New York"]);
-  // }, [todos]);
-
-  // return (
-  //   <div>
-  //     <Todos todos={todos} addTodo={addTodo} />
-  //     <hr />
-  //     <div>
-  //       Count:{count}
-  //       <button onClick={increment}>+</button>
-  //     </div>
-  //   </div>
-  // );
   return (
     <div>
-      <Info />
+      <h1>react-redux 설정</h1>
+      <span></span>
+      <br />
     </div>
   );
 }
